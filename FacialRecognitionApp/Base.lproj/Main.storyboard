@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FacialRecognitionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tco-yT-pdL">
+                                <rect key="frame" x="20" y="840" width="390" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="810-RX-pKP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="od9-P7-hXs">
+                                <rect key="frame" x="20" y="59" width="390" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="T2A-lJ-Uc9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Get Image"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get Image">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="getImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yOG-Vk-VZt"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u6g-fd-Mf2">
+                                <rect key="frame" x="20" y="124" width="390" height="665"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="od9-P7-hXs" firstAttribute="leading" secondItem="u6g-fd-Mf2" secondAttribute="leading" id="4tY-a6-E6B"/>
+                            <constraint firstItem="tco-yT-pdL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8jq-Es-QGx"/>
+                            <constraint firstItem="u6g-fd-Mf2" firstAttribute="leading" secondItem="tco-yT-pdL" secondAttribute="leading" id="DuO-ly-CX6"/>
+                            <constraint firstItem="od9-P7-hXs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JQE-xr-wbQ"/>
+                            <constraint firstItem="u6g-fd-Mf2" firstAttribute="top" secondItem="od9-P7-hXs" secondAttribute="bottom" constant="30" id="JYI-S1-pRB"/>
+                            <constraint firstItem="od9-P7-hXs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MWh-wH-HrB"/>
+                            <constraint firstItem="od9-P7-hXs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WRK-o6-8vy"/>
+                            <constraint firstItem="u6g-fd-Mf2" firstAttribute="trailing" secondItem="tco-yT-pdL" secondAttribute="trailing" id="Wvb-IZ-EE9"/>
+                            <constraint firstItem="od9-P7-hXs" firstAttribute="trailing" secondItem="u6g-fd-Mf2" secondAttribute="trailing" id="knC-O9-u1y"/>
+                            <constraint firstItem="tco-yT-pdL" firstAttribute="top" secondItem="u6g-fd-Mf2" secondAttribute="bottom" constant="51" id="suD-h6-w73"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="tco-yT-pdL" id="JtG-0F-Abd"/>
+                        <outlet property="pictureChosen" destination="u6g-fd-Mf2" id="BUa-6o-fj8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.74418604651163" y="3.8626609442060089"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
